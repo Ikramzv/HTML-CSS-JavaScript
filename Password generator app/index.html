@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator-App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+    <link rel="icon" href="../images/stars.avif">
+    <script src="app.js" defer></script>
+</head>
+<body>  
+    
+    <div class="container">
+        <div class="title">
+            <h2>Password generator</h2>
+            <input type="text" id="password" autocomplete="off" readonly>
+            <button id="copy">Copy the clipboard</button>
+        </div>
+        <div class="body">
+            <label for="length">Password length</label>
+            <input type="number" id="length" min="8" max="30">
+
+            <label for="upper">Contain uppercase letters</label>
+            <input type="checkbox" id="upper" name="upperLetters">
+
+            <label for="lower">Contain lowercase letters</label>
+            <input type="checkbox" id="lower" name="lowerLetters">
+            
+            <label for="number">Contain numbers</label>
+            <input type="checkbox" id="number" name="numbers">
+            
+            <label for="symbol">Contain symbols</label>
+            <input type="checkbox" id="symbol" name="symbols">
+        </div>
+        <div class="footer">
+            <button class="btn" id="generator">Generate Password</button>
+        </div>
+    </div>
+    
+</body>
+
+</html>

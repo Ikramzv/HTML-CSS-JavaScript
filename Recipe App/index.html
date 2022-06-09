@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe-App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="left">
+                <div id="debugger">
+                    <div id="hamburger"></div>
+                </div>
+            </div>
+            <div class="center">
+                <h1>All recipes <i class="fa-solid fa-spoon"></i></h1>
+            </div>
+            <div class="right">
+                <input type="search" placeholder="Type here.." name="search" id="search" autocomplete="on" autofocus>
+                <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            </div>
+        </header>
+        <div class="fav-container">
+            <h1>Favourite meals</h1>
+            <div id="fav-meals">
+
+            </div>
+        </div>
+        <div class="meals" id="meals">
+
+        </div>
+
+        <div class="meal-info-container hidden" id="meal-info-container">
+            <div id="meal-info" class="meal-info">
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+
+h1 {
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: bold;
+    letter-spacing: 1rem;
+    color: rgba(149, 99, 199, 0.46);
+    font-size: 6rem;
+    opacity: 0.4;
+    text-shadow: 0 0 10px rgba(65, 105, 225, 0.275);
+}
+
+form {
+    width: 400px;
+    max-width: 100%;
+    margin: 2rem auto 5rem auto;
+    box-shadow: 0 0 4px 1px rgba(102, 51, 153, 0.779);
+    border-radius: .7rem;
+    margin-trim: unset;
+    pointer-events: all;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    border-top-left-radius: .7rem;
+    border-top-right-radius: .7rem;
+}
+
+.input:focus {
+    background-color: rgba(148, 99, 198, 0);
+    animation: opacity 500ms ease forwards;
+}
+
+@keyframes opacity {
+    to {
+        background-color: rgba(148, 99, 198);
+    }
+}
+
+.input::placeholder {
+    color: #b5b5b5;
+}
+
+.todos {
+    border-bottom-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.todos li {
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    cursor: pointer;
+}
+
+.close {
+    border: none;
+    background-color: transparent;
+    font-size: 1.8rem;
+}
+
+.close:active {
+    transform: scale(.9);
+}
+
+.completed {
+    border-left: 5px solid green ;
+}
+
+small {
+    margin-bottom: .5rem;
+    font-size: 1.4rem;
+    display: block;
+    text-align: center;
+    color: rgb(208, 130, 34);
+}

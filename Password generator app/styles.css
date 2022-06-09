@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(315deg , purple 19% , violet 90%);
+    background-color: rgba(63, 7, 7, 0.352);
+    background-blend-mode: color-burn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0 black;
+    width: 350px;
+    height: 400px;
+    padding: 1rem 2rem;
+    background: linear-gradient(315deg , purple 19% , violet 90%);
+    background-color: #3b2066;
+    background-blend-mode: color-burn;
+    border-radius: 8px;
+    padding-bottom: 1.6rem;
+}
+
+.container .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+    color: white;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.container .title input {
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: rgb(8, 28, 123);
+    color: wheat;
+    padding: .7rem 2rem;
+    transition: 500ms ease all;
+} 
+
+.container .title button {
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    bottom: -25px;
+    background-color: white;
+    z-index: 1000;
+    color: black;
+    border-radius: 7px;
+    padding: .4rem;
+    font-size: 1.4rem;
+}
+
+.container .title button:active {
+    transform: scale(.97);
+}
+
+.container .body {
+    margin-top: 4rem;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .body label {
+    flex: 1 1 90%;
+    font-size: 2rem;
+    color: white;
+} 
+
+.container .body input {
+    flex: 1 1 10%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: .3rem;
+}
+
+.container label[for='length'] {
+    flex: 1 1 70%;
+}
+
+.container .body #length {
+    flex: 1 1 30%;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    padding: .5rem .6rem;
+    margin-bottom: 2rem;
+}
+
+.container .body #length:invalid {
+    border: 3px solid red;
+    animation: shake 400ms linear;
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(4px);
+    }
+    50% {
+        transform: translateX(-4px);
+    }
+    75% {
+        transform: translateX(4px);
+    }
+    100% {
+        transform: translateX(-4px);
+    }
+}
+
+.container .footer {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.footer .btn {
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 2rem;
+    background: #3b2066;
+    color: lightcyan;
+    border-radius: 7px;
+    box-shadow: 0 0 5px 0 #3b2066;
+}
+
+.footer .btn:active {
+    transform: scale(.98);
+}

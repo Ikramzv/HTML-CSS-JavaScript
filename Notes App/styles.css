@@ -1,0 +1,181 @@
+* {
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 5%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.actions {
+    position: fixed;
+}
+
+#addNote {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.425);
+    background-color: black;
+    color: white;
+    height: fit-content;
+}
+
+#addNote:hover {
+    background-color: rgba(0, 0, 0, 0.874);
+}
+
+#addNote:active {
+    transform: scale(.95);
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-height: 100%;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+#container .note {
+    flex-basis: 40%;
+    margin-top: 1rem;
+}
+
+.note {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 black;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+}
+
+.note-header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #abe25e;
+}
+
+.note-header .left{
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-header .left button {
+    width: fit-content;
+    font-size: 2.2rem;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+}
+
+.note-header .left button:hover ,
+.note-header .right button:hover{
+    color: black;
+}
+
+.note-header .left button:active ,
+.note-header .right button:active {
+    transform: scale(.9);
+}
+
+.note-header .right button{
+    font-size: 2.2rem;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.note-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.note .main {
+    padding: 2rem;
+    flex: 1 1 100%;
+}
+
+.note .main:first-child {
+    
+}
+
+.note .main > * {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.note-body textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    border: none;    
+    outline: none;
+    font-size: 1.6rem;
+}
+
+.note-body textarea::-webkit-scrollbar {
+    width: 1.2rem;
+}
+.note-body textarea::-webkit-scrollbar-track {
+    width: 1.2rem;
+    border-radius: .8rem;
+    background: #53791e15;
+}
+.note-body textarea::-webkit-scrollbar-thumb {
+    background-color: #9dc862cd;
+    border-radius: .8rem;
+}
+
+.note-body textarea:focus {
+    background: #ece9e673;
+    border: none;
+}
+
+/* .note-body button {
+    border-radius: 20px;
+    font-size: 2rem;
+    background-color: #9ec862;
+    border: none;
+    filter: drop-shadow(0 0 10px #9ec862);
+    padding: 1rem 2rem;
+    margin-inline: 1rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.note-body button:active {
+    transform: scale(0.98);
+}
+
+.note-body button:hover {
+    background-color: #9dc862a2;
+} */
+
+.note .hidden {
+    display: none;
+}

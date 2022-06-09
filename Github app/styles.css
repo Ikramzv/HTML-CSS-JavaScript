@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0d253f;
+    --secondary-color: #01b4e4;
+    --tertiary-color: #90cea1;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: "Poppins" , sans-serif;
+    background: linear-gradient(315deg , #2a2a72 50% , #2e2a68 74%);
+    background-color: purple;
+    background-blend-mode: darken;
+}
+
+li , a {
+    text-decoration: none;
+    list-style-type: none; 
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 400px;
+    height: 5rem;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-size: 2rem;
+    transition: .7s ease background-color;
+    border: none;
+    outline: none;
+}
+
+input.invalid {
+    animation: shake .5s linear alternate;
+}
+
+@keyframes shake{
+    25% {
+        transform: translateX(6px);
+    }
+    50% {
+        transform: translateX(-6px);
+    }
+    75% {
+        transform: translateX(6px);
+    }
+    100% {
+        transform: translateX(6px);
+    }
+}
+
+input:focus {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.452);
+}
+
+input::placeholder {
+    color: #2a2a72;
+}
+
+#cards {
+    display: none;
+    background: linear-gradient(315deg , purple 19% , violet 90%);
+    background-color: #3b2066;
+    background-blend-mode: color-burn;
+    margin-top: 1.8rem;
+    width: 600px;
+    height: 300px;
+    border-radius: 4rem;
+    box-shadow: 2px 2px 6px 2px black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: ltr;
+}
+
+#cards::-webkit-scrollbar {
+    width: 1rem;
+}
+#cards::-webkit-scrollbar-thumb {
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 4rem;
+}
+#cards::-webkit-scrollbar-track {
+    pointer-events: none;
+    opacity: 0;
+    border-radius: 4rem;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
+
+.card .left-side {
+    flex: 1 1 20%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;      
+}
+
+.card .left-side img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 5px white);
+}
+
+.card .right-side {
+    width: 60%;
+    min-height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #eee;
+}
+
+.card .right-side h2 {
+    color: aqua;
+    text-transform: capitalize;
+    text-shadow: 0 0 3px var(--primary-color);
+    font-size: 3rem;
+}
+
+.card .right-side ul {
+    width: 70%;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .right-side p {
+    font-size: 1.6rem;
+}
+
+.card .right-side ul li {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+.card .right-side ul li i {
+    font-size: 2rem;
+    margin-right: .3rem;
+}
+
+.card .right-side ul li #heart {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.card .right-side ul li #heart:active {
+    transform: scale(.9);
+}
+
+.card .right-side ul li #heart.colored {
+    color: red;
+}
+
+.card .repos {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.card .repos h2 { 
+    text-align: center;
+    font-size: 2rem;
+    color: aqua;
+    margin-bottom: 1rem;
+}
+
+.card .repos .repos-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: .5rem 1rem;
+}
+
+.card .repos .repos-list li {
+    margin-left: .5rem;
+    padding: .2rem .4rem;
+    border-radius: .5rem;
+    background: #2a2a72;
+    transition: .8s ease opacity , .4s ease transform;
+}
+
+
+.card .repos .repos-list li a:hover {
+    color: #aaa; 
+}
+
+.card .repos .repos-list li:active {
+    transform: scale(.95);
+}
+
+.card .repos .repos-list li a {
+    font-size: 1.8rem;
+    color: #eee;
+    text-transform: capitalize;
+    letter-spacing: normal;
+}
+
+.scroll {
+    color: #ddd;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
